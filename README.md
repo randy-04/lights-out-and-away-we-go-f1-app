@@ -13,8 +13,8 @@ The user will also be able to delete any driver they don't like and change ranki
 
 ## Author
 
-[Randy Kipkurui] (https://github.com/randy-04)
+- [@Randy Kipkurui](https://github.com/randy-04)
 
 ## Licence
 
-MIT
+[MIT](https://github.com/randy-04/lights-out-and-away-we-go-f1-app/blob/main/LICENSE.md)
