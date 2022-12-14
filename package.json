@@ -1,0 +1,25 @@
+{
+  "name": "phase-1-project",
+  "version": "1.0.0",
+  "description": "## Getting started",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randy-04/lights-out-and-away-we-go-f1-app.git"
+  },
+  "keywords": [
+    "f1"
+  ],
+  "author": "Randy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/randy-04/lights-out-and-away-we-go-f1-app/issues"
+  },
+  "homepage": "https://github.com/randy-04/lights-out-and-away-we-go-f1-app#readme",
+  "dependencies": {
+    "json-server": "^0.17.1"
+  }
+}
