@@ -5,7 +5,7 @@
     font-family: 'Racing Sans One', cursive;
 }
 /* header styling */
-header {
+#container {
     height: 100vh;
     width: 100%;
     position: relative;
@@ -17,7 +17,7 @@ header #logo {
     position: absolute;
     left: 8%;
     top: 30px;
-    font-size: 30px;
+    font-size: 25px;
     z-index: 997;
     font-weight: bold;    
 }
@@ -53,3 +53,71 @@ nav ul li a:hover {
 }
 
 /* end of header styling */
+
+/* image styling */
+#img {
+    position: absolute;
+    top: calc(50% - 300px);
+    right: 5%;
+    z-index: 999;
+}
+#img img {
+    height: 600px;
+    filter: drop-shadow(-140px -140px 5px rgba(0,0,0,0.5));
+    transition: 0.5s;
+}
+#img img:hover {
+    filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5)); 
+}
+/* end of image styling */
+
+/* heading styling */
+#heading {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    z-index: 996;
+}
+#heading h2 {
+    font-size: 80px;
+    color: #000;
+}
+#heading h2:hover {
+    color: #FF1801;
+    transition: 0.5s;
+}
+/* end of heading styling */
+
+/* icons styling */
+#icons {
+    height: 300px;
+    width: 60px;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 200px);
+    background: #FF1801;
+    border-radius: 0 65px 65px 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 998;
+}
+#icons:hover{
+    background: #000;
+    
+}
+#icons a{
+    text-decoration: none;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    margin: 25px 0;
+    font-size: 25px;
+}
+#icons a:hover{
+    color: #FF1801;
+    transition: 0.8s;
+}
