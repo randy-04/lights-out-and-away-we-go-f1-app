@@ -13,6 +13,11 @@
     left: 0;
     background: whitesmoke;
 }
+.logo img {
+    max-width: 100%;
+    height: auto;
+    width: 120px;
+}
 header #logo {
     position: absolute;
     left: 8%;
@@ -48,8 +53,7 @@ nav ul li a:hover {
     text-decoration: overline;
     font-size: 22px;
     letter-spacing: 1px;
-    cursor: pointer;
-    
+    cursor: pointer;    
 }
 
 /* end of header styling */
@@ -57,7 +61,7 @@ nav ul li a:hover {
 /* image styling */
 #img {
     position: absolute;
-    top: calc(50% - 300px);
+    top: calc(50% - 200px);
     right: 5%;
     z-index: 999;
 }
@@ -119,5 +123,29 @@ nav ul li a:hover {
 }
 #icons a:hover{
     color: #FF1801;
-    transition: 0.8s;
+    transition: 0.75s;
 }
+/* end of icons styling */
+
+/* dropdowns section stats */
+#dropdowns {
+    background: whitesmoke;
+}
+#stats{
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+    color:#FF1801;
+}
+#dropdowns select {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 25px;
+    padding-bottom: 50px;
+}
+#dropdowns span#choose-f1 {
+    font-size: 28px;
+}
+/* end of dropdown section */
