@@ -54,9 +54,25 @@ window.addEventListener("DOMContentLoaded", async () => {
     rankings.forEach((dereva) => {
         
         let oneDriver = document.createElement('li')
-        oneDriver.className = 'driver-item'
+        oneDriver.className = "pt-6 md:p-8 text-center md:text-left space-y-4" 
+        oneDriver.className = "max-w-sm rounded overflow-hidden shadow-lg"
+        
 
-        oneDriver.innerHTML = dereva.driver.name
+        oneDriver.innerHTML=`<img src="${dereva.driver.image}" class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" width="284" height="412" />
+            <p class = "text-lg font-medium"> ${dereva.driver.name}, ${dereva.driver.number}</p>
+            <figcaption class="font-medium">
+            <div class="text-red-600 dark:text-red-600">
+                ${dereva.team.name}
+                <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full mr-4" src="${dereva.team.logo}"/>
+                </div>
+            </div>
+            <div class="text-slate-700 dark:text-slate-500">
+                ${dereva.points}, Position: ${dereva.position}
+            </div>
+            </figcaption>
+        `
+        
         driverList.appendChild(oneDriver)
         
 

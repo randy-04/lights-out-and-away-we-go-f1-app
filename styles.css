@@ -149,3 +149,19 @@ nav ul li a:hover {
     font-size: 28px;
 }
 /* end of dropdown section */
+
+/* start of driver list styling */
+ul {
+    list-style-type: none;
+}
+#drivers img {
+    max-width: 90%;
+    height: auto;
+    width: 80px;
+}
+
+#rankings h2{
+    text-align: center;
+}
+
+/* end of driver list styling */
