@@ -11,6 +11,8 @@
     <link rel="icon" href="./images/original-2f140da989c67e228c5eaf989e0d829e.webp" type="image/icon type">
     <!-- flowbite tailwind css -->
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css" />
     <title>Lights Out, Let's Gooo</title>
 </head>
 <body>
@@ -53,7 +55,7 @@
             <h2 id = "stats">Stats</h2>
             
             <label for="countries_multiple" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><span id = "choose-f1">Choose an F1 Season</span></label>
-            <select multiple id="countries_multiple" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <select multiple id="years_multiple" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option selected>Year</option>
                 <option value="2022">2022</option>
                 <option value="2021">2021</option>
@@ -64,6 +66,14 @@
         </section>
 
         <section id = "rankings">
+            <h2>Driver Rankings</h2>
+
+            <div class = "list-container">
+                <!-- list of drivers -->
+                <ul class = "ui divided list" id = "drivers">
+
+                </ul>
+            </div>
 
         </section>
         
@@ -75,8 +85,10 @@
     <!-- fontawesome kit code -->
     <script src="https://kit.fontawesome.com/a42a664857.js" crossorigin="anonymous"></script>
     <!-- tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <!-- flowbite tailwind -->
     <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </body>
 </html>
