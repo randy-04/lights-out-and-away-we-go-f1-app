@@ -76,13 +76,12 @@ function renderDriverSeasonRanks(dereva) {
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
-    const year = parseInt(document.getElementById("years").value)
     
+    let year = document.getElementById("years")   
     
-
-    document.getElementById("years").addEventListener("click", async () => {
-        await getDriverRanksByYear(year)
-        console.log(year)
+    // get the value of the selected option from the drop-down
+    year.addEventListener("change", async (e) => {
+        await getDriverRanksByYear(e.target.value)
 
     })
 
