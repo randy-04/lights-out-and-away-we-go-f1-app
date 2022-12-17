@@ -80,7 +80,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     let year = document.getElementById("years")   
     
     // get the value of the selected option from the drop-down
-    year.addEventListener("change", async (e) => {
+    year.addEventListener("click", async (e) => {
         await getDriverRanksByYear(e.target.value)
 
     })

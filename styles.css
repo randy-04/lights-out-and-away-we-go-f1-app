@@ -165,3 +165,34 @@ ul {
 }
 
 /* end of driver list styling */
+
+/* footer styling */
+footer {
+    /* background: var(--text-color);
+    color: whitesmoke;
+    border-top: 2px solid var(--main-color); */
+    background: #000;
+    color: whitesmoke;
+    border-top: 2px solid var(--main-color);
+}
+.footer-box{
+    display:flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.footer-box .pic-art {
+    color: var(--bg-color);
+    margin-bottom: 1rem;
+}
+.footer-box .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.footer-wrapper h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+
+/* end of footer styling */
