@@ -1,3 +1,4 @@
+// function to get driver rankings by year
 async function getDriverRanksByYear(year) {
     try {
         const resp = await window.fetch(`https://api-formula-1.p.rapidapi.com/rankings/drivers?season=${year}`, {method: 'GET',
@@ -16,10 +17,6 @@ async function getDriverRanksByYear(year) {
     }
 }
 
-// function init() {
-//     getDriverRanks();
-//     showDrivers()
-// }
 
 // function to fetch driver data
 // function getRankings() {
@@ -69,28 +66,93 @@ function renderDriverSeasonRanks(dereva) {
             </div>
         </div>
         <div class="text-slate-700 dark:text-slate-500">
-            ${dereva.points}, Position: ${dereva.position}
+            ${dereva.points} Points, Position: ${dereva.position}
         </div>
         </figcaption>
     `
     
     driverList.appendChild(oneDriver) 
-
 }
 
-window.addEventListener("DOMContentLoaded", async () => {
-    
+// function to handle driver year event
+function driverByYearEvent() {
     let year = document.getElementById("years")   
     
     // get the value of the selected option from the drop-down
     year.addEventListener("change", async (e) => {
-        await clearDrivers()
+        clearDrivers()
         await getDriverRanksByYear(e.target.value)
         console.log(e.target.value)
         
 
     })
+}
 
-})
+// function to get team rankings by year
+async function getTeamRanksByYear(year) {
+    try {
+        const resp = await window.fetch(`https://api-formula-1.p.rapidapi.com/rankings/teams?season=${year}`, {method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '4818705ef7msh949a70a405c962fp1fea89jsn66dada7a2c3b',
+            'X-RapidAPI-Host': 'api-formula-1.p.rapidapi.com'
+        }})
+        const data = await resp.json();
+        console.log(data);
+
+        return data.response.forEach(items => renderTeamSeasonRanks(items));
+    } catch (err) {
+        console.log(err);
+
+        return [];
+    }
+}
+
+// function to clear drivers after a new selection is made
+function clearTeams() {
+    let teamArea = document.querySelector('#teams')
+    teamArea.textContent=''
+}
+
+// function to display the teams based on rank
+function renderTeamSeasonRanks(constructor) {
+    let teamList = document.querySelector('#teams')
+    let oneTeam = document.createElement('li')
+    oneTeam.className = "pt-6 md:p-8 text-center md:text-left space-y-4" 
+    oneTeam.className = "max-w-sm rounded overflow-hidden shadow-lg"
+    
+
+    oneTeam.innerHTML=`<img src="${constructor.team.logo}" class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" width="284" height="412" />
+        <figcaption class="font-medium">
+        <div class="text-red-600 dark:text-red-600">
+            ${constructor.team.name}
+        </div>
+        <div class="text-slate-700 dark:text-slate-500">
+            ${constructor.points} Points, Position: ${constructor.position}
+        </div>
+        </figcaption>
+    `
+    
+    teamList.appendChild(oneTeam) 
+
+}
+// function to handle change event for the teams drop-down menu
+function teamByYearEvent() {
+    let yr = document.getElementById('team-years')
+
+    yr.addEventListener('change', async (e) => {
+        // calling the function to first clear the teams section
+        clearTeams()
+        await getTeamRanksByYear(e.target.value)
+        console.log(e.target.value)
+    })
+}
+
+// function to hold all functions
+function init() {
+    driverByYearEvent();
+    teamByYearEvent();
+}
+
+window.addEventListener("DOMContentLoaded", init)
     
   
