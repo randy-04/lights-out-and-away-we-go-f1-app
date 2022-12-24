@@ -147,10 +147,29 @@ function teamByYearEvent() {
     })
 }
 
+
+// function to handle pause/play of the video at the Drive to Survive Section
+function d2s() {
+    let btn = document.getElementById('myBtn')
+    let video = document.getElementById('myVideo')
+
+    // event listener to play/pause
+    btn.addEventListener('click', () => {
+        if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+          } else {
+            video.pause();
+            btn.innerHTML = "Play";
+          }
+    })
+}
+
 // function to hold all functions
 function init() {
     driverByYearEvent();
     teamByYearEvent();
+    d2s();
 }
 
 window.addEventListener("DOMContentLoaded", init)
