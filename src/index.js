@@ -45,6 +45,12 @@ async function getDriverRanksByYear(year) {
 //     }
 // }
 
+// function to clear drivers after a new selection is made
+function clearDrivers() {
+    let driverArea = document.querySelector('#drivers')
+    driverArea.textContent=''
+}
+
 // function to display the drivers
 function renderDriverSeasonRanks(dereva) {
     let driverList = document.querySelector('#drivers')
@@ -68,10 +74,7 @@ function renderDriverSeasonRanks(dereva) {
         </figcaption>
     `
     
-    driverList.appendChild(oneDriver)
-        
-
-    
+    driverList.appendChild(oneDriver) 
 
 }
 
@@ -80,8 +83,11 @@ window.addEventListener("DOMContentLoaded", async () => {
     let year = document.getElementById("years")   
     
     // get the value of the selected option from the drop-down
-    year.addEventListener("click", async (e) => {
+    year.addEventListener("change", async (e) => {
+        await clearDrivers()
         await getDriverRanksByYear(e.target.value)
+        console.log(e.target.value)
+        
 
     })
 
