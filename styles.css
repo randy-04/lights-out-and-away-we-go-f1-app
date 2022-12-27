@@ -128,6 +128,22 @@ nav ul li a:hover {
 }
 /* end of icons styling */
 
+/* start of drivers section styling */ 
+.driver-title {
+    text-align: center;
+}
+.driver-title span {
+    font-weight: 500;
+    color: #FF1801;
+    font-size: 50px;
+}
+.driver-title h3 {
+    font-style: italic;
+    font-size: 25px;
+}
+
+/* end of drivers section styling */
+
 /* dropdowns section stats */
 #dropdowns {
     background: whitesmoke;
