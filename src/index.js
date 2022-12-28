@@ -197,6 +197,10 @@ function renderAllDrivers(pilot) {
         <h2>${pilot.driver.name}, ${pilot.driver.number}</h2>
         `
     driversPit.appendChild(oneDriver)
+
+    // oneDriver.h2.addEventListener('mouseenter',() => {
+    //     console.log('okay')
+    // })
 }
 
 // function to hold all functions
