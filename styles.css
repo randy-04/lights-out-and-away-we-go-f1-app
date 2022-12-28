@@ -142,6 +142,42 @@ nav ul li a:hover {
     font-size: 25px;
 }
 
+.drivers-pit {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.drivers-pit .cont {
+    flex: 1 1 19rem;
+    position: relative;
+    height: 250px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.drivers-pit .cont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.drivers-pit .cont img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.drivers-pit .cont h2 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding: 8px;
+    border-radius: 0.5rem;
+}
+.drivers-pit .cont h2:hover {
+    color: #FF1801;
+    cursor: pointer;
+}
+
 /* end of drivers section styling */
 
 /* dropdowns section stats */
