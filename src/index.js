@@ -120,7 +120,7 @@ function renderTeamSeasonRanks(constructor) {
     oneTeam.className = "pt-6 md:p-8 text-center md:text-left space-y-4" 
     oneTeam.className = "max-w-sm rounded overflow-hidden shadow-lg"
     
-
+    // rendering on DOM from the API
     oneTeam.innerHTML=`<img src="${constructor.team.logo}" class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" width="284" height="412" />
         <figcaption class="font-medium">
         <div class="text-red-600 dark:text-red-600">
@@ -165,11 +165,46 @@ function d2s() {
     })
 }
 
+
+//function to fetch all driver data
+async function getAllDrivers() {
+    try {
+        const resp = await window.fetch("https://api-formula-1.p.rapidapi.com/rankings/drivers?season=2022", {method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '4818705ef7msh949a70a405c962fp1fea89jsn66dada7a2c3b',
+            'X-RapidAPI-Host': 'api-formula-1.p.rapidapi.com'
+        }})
+        const data = await resp.json();
+        console.log(data);
+
+        return data.response.forEach((items) => renderAllDrivers(items));
+    } catch (err) {
+        console.log(err);
+
+        return [];
+    }
+}
+
+
+// function to display the drivers on the DOM
+function renderAllDrivers(pilot) {
+    let driversPit = document.querySelector('.drivers-pit')
+    let oneDriver = document.createElement('div');
+    oneDriver.className = 'cont';
+
+    // rendering on the selected part of DOM from the API server
+    oneDriver.innerHTML = `<img src="${pilot.driver.image}" alt="${pilot.driver.abbr}"/>
+        <h2>${pilot.driver.name}, ${pilot.driver.number}</h2>
+        `
+    driversPit.appendChild(oneDriver)
+}
+
 // function to hold all functions
 function init() {
     driverByYearEvent();
     teamByYearEvent();
     d2s();
+    getAllDrivers();
 }
 
 window.addEventListener("DOMContentLoaded", init)
