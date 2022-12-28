@@ -152,6 +152,7 @@ function teamByYearEvent() {
 function d2s() {
     let btn = document.getElementById('myBtn')
     let video = document.getElementById('myVideo')
+    let mute = document.getElementById('mutebtn')
 
     // event listener to play/pause
     btn.addEventListener('click', () => {
@@ -162,6 +163,19 @@ function d2s() {
             video.pause();
             btn.innerHTML = "Play";
           }
+    })
+
+    // event listener to mute audio
+    mute.addEventListener('click', () => {
+        if (video.muted === true) {
+            video.muted = false;
+            mute.innerHTML = "Mute";
+        }
+        
+        else if (video.muted === false) {
+            video.muted = true;
+            mute.innerHTML = "Unmute"
+        }
     })
 }
 

@@ -274,6 +274,19 @@ color: black;
     color:#FF1801;
 }
 
+#mutebtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+#mutebtn:hover {
+    background: #ddd;
+    color: black;
+    }
 /* end of d2s section styling */
 
 /* footer styling */
