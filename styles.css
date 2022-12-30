@@ -87,9 +87,10 @@ nav ul .btn:hover {
     width: 450px;
     padding: 1.3rem;
     min-height: 250px;
-    position: absolute;
+    position: relative;
     z-index: 2;
-    top: 20%;
+    top: 40px;
+    left: 400px;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 15px;
@@ -109,6 +110,9 @@ nav ul .btn:hover {
     cursor: pointer;
     border: none;
     font-weight: 600;
+}
+.modal a:hover {
+    color:#FF1801;
 }
 .btn {
     display: inline-block;
