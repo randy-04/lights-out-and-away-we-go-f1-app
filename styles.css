@@ -441,3 +441,9 @@ html::-webkit-scrollbar-thumb {
     background: #FF1801;
 }
 /* end of scroll bar styling */
+
+/* Scroll behaviour */
+html {
+    scroll-behavior: smooth;
+}
+/* End of Scroll behaviour */
