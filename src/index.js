@@ -246,7 +246,20 @@ function champModal() {
     // open modal event
     openModalBtn.addEventListener("mouseenter", openModal);
 }
+// function for scrolling to top
+function scrollTop() {
+    const scroll = document.querySelector('.scroll-top');
+    window.addEventListener('scroll', function() {
+        scroll.classList.toggle("active", window.scrollY > 500)
+    })
 
+    scroll.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior:"smooth"
+        })
+    })
+}
 
 // function to hold all functions
 function init() {
@@ -255,6 +268,7 @@ function init() {
     d2s();
     getAllDrivers();
     champModal();
+    scrollTop();
 }
 
 window.addEventListener("DOMContentLoaded", init)
