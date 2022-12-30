@@ -247,6 +247,7 @@ function champModal() {
     openModalBtn.addEventListener("mouseenter", openModal);
 }
 
+
 // function to hold all functions
 function init() {
     driverByYearEvent();

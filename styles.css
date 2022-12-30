@@ -447,3 +447,30 @@ html {
     scroll-behavior: smooth;
 }
 /* End of Scroll behaviour */
+
+/* Scroll to Top button */
+.scroll-top {
+    position: fixed;
+    bottom: 800px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background:#FF1801 url('./images/up.png');
+    border-radius: 50%;
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 100000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.scroll-top.active {
+    visibility: visible;
+    opacity: 1;
+    bottom: 40px;
+}
+
+/* End of Scroll to Top button */
