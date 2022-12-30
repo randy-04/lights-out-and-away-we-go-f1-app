@@ -474,3 +474,32 @@ html {
 }
 
 /* End of Scroll to Top button */
+
+/* responsiveness */
+@media (max-width: 1080px) {
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+@media (max-width: 991px) {
+    nav {
+        padding: 15px 20px;
+    }
+    section {
+        padding: 3rem 0 1rem;
+    }
+    #heading {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 414px) {
+    #heading {
+        font-size: 1.4rem;
+    }
+    #pilots {
+        flex-direction: column-reverse;
+    }
+}
+
+/* end of responsiveness */
