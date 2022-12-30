@@ -56,8 +56,99 @@ nav ul li a:hover {
     cursor: pointer;  
     color: #000;  
 }
-
+/* f1 champ button */
+nav ul .btn {
+    height: 50px;
+    width: 120px;
+    position: absolute;
+    top: 20px;
+    right: 7%;
+    display: grid;
+    place-items: center;
+    background: #000;
+    border-radius: 10px 20px;
+    color: #fff;
+}
+nav ul .btn:hover {
+    background: #fff;
+    color: #FF1801;
+}
 /* end of header styling */
+
+/* modal styling */
+.modal {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 450px;
+    padding: 1.3rem;
+    min-height: 250px;
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+.modal .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0.4rem 0 0.2rem;
+}
+.modal button {
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+}
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+}
+.btn-open {
+    position: absolute;
+    bottom: 150px;
+}
+
+.btn-close {
+transform: translate(10px, -20px);
+padding: 0.5rem 0.7rem;
+background: #eee;
+border-radius: 50%;
+}
+
+.overlay {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+backdrop-filter: blur(3px);
+z-index: 1;
+}
+
+.hidden {
+display: none;
+}
+/* end of modal styling */
 
 /* image styling */
 #img {

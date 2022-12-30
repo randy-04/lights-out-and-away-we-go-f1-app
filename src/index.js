@@ -205,16 +205,13 @@ function renderAllDrivers(pilot) {
     let driversPit = document.querySelector('.drivers-pit')
     let oneDriver = document.createElement('div');
     oneDriver.className = 'cont';
+    let oneModal = document.createElement('div');
 
     // rendering on the selected part of DOM from the API server
     oneDriver.innerHTML = `<img src="${pilot.driver.image}" alt="${pilot.driver.abbr}"/>
         <h2>${pilot.driver.name}, ${pilot.driver.number}</h2>
         `
     driversPit.appendChild(oneDriver)
-
-    // oneDriver.h2.addEventListener('mouseenter',() => {
-    //     console.log('okay')
-    // })
 }
 
 // function to hold all functions
