@@ -11,7 +11,24 @@ Access to this information in the API is done through the GET method.
 
 The application will have various points of information concerning Formula One with the aim of getting users more farmiliar with the sport. 
 
+On mouse hover, the button at the top right displays information about the 2022 Formula One Champion.
 
+At the end of the page, there is a Drive To Survive video which the user can pause or mute. It plays on a loop and is muted by default.
+
+## Setup Instructions
+
+- Clone this repository into your local machine. The URL is https://github.com/randy-development-work/lights-out-and-away-we-go-f1-app. 
+
+- Open your terminal and go to your desired directory. Once there, type in this command:
+```bash
+  git clone git@github.com:randy-development-work/lights-out-and-away-we-go-f1-app.git
+ ```
+- The whole project will be available to you on your local machine. 
+
+- Open the `index.html` file on your browser to run the application. Double-clicking the file will open it on your browser. You can also do this by typing this into your terminal:
+```bash
+  google-chrome index.html
+ ```
 
 ## Author
 
