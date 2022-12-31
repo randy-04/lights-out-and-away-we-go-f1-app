@@ -479,8 +479,7 @@ html {
 /* responsiveness */
 @media (max-width: 1080px) {
     #container {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        padding: 80px 4%;
     }
 }
 @media (max-width: 350px) {
@@ -490,7 +489,7 @@ html {
     section {
         padding: 3rem 0 1rem;
         display: block;
-        position: absolute;
+        position: relative;
         flex-direction: column;
     }
     #heading {
