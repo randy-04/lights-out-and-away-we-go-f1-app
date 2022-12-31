@@ -185,6 +185,7 @@ display: none;
 #heading h2:hover {
     color: #FF1801;
     transition: 0.5s;
+    cursor: pointer;
 }
 /* end of heading styling */
 
@@ -477,17 +478,20 @@ html {
 
 /* responsiveness */
 @media (max-width: 1080px) {
-    .container {
+    #container {
         margin-left: 1rem;
         margin-right: 1rem;
     }
 }
-@media (max-width: 991px) {
+@media (max-width: 350px) {
     nav {
         padding: 15px 20px;
     }
     section {
         padding: 3rem 0 1rem;
+        display: block;
+        position: absolute;
+        flex-direction: column;
     }
     #heading {
         font-size: 2rem;

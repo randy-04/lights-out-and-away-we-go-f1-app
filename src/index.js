@@ -9,6 +9,7 @@ async function getDriverRanksByYear(year) {
         const data = await resp.json();
         console.log(data);
 
+        // using forEach to select each element separately through the respective function
         return data.response.forEach(items => renderDriverSeasonRanks(items));
     } catch (err) {
         console.log(err);
@@ -16,31 +17,6 @@ async function getDriverRanksByYear(year) {
         return [];
     }
 }
-
-
-// function to fetch driver data
-// function getRankings() {
-//     fetch ('http://localhost:3000/response', {
-//         method: 'GET',
-//     })
-//     .then(res => res.json())
-//     .then(data => console.log(data))
-// }
-
-// async function getDriversFromServer() {
-//     try {
-//         const resp = await window.fetch('http://localhost:3000/response', { method: "GET" });
-//         const data = await resp.json();
-
-//         console.log(data)
-
-//         return data;
-//     } catch (error) {
-//         console.log(error);
-
-//         return [];
-//     }
-// }
 
 // function to clear drivers after a new selection is made
 function clearDrivers() {
@@ -55,7 +31,7 @@ function renderDriverSeasonRanks(dereva) {
     oneDriver.className = "pt-6 md:p-8 text-center md:text-left space-y-4" 
     oneDriver.className = "max-w-sm rounded overflow-hidden shadow-lg"
     
-
+    // using innerHTML to apply elements to the DOM through normal HTML 
     oneDriver.innerHTML=`<img src="${dereva.driver.image}" class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" width="284" height="412" />
         <p class = "text-lg font-medium"> ${dereva.driver.name}, ${dereva.driver.number}</p>
         <figcaption class="font-medium">
@@ -70,7 +46,7 @@ function renderDriverSeasonRanks(dereva) {
         </div>
         </figcaption>
     `
-    
+    // appending the driver list to the driver container
     driverList.appendChild(oneDriver) 
 }
 
@@ -131,7 +107,7 @@ function renderTeamSeasonRanks(constructor) {
         </div>
         </figcaption>
     `
-    
+    // appending the list to the list container
     teamList.appendChild(oneTeam) 
 
 }
@@ -167,6 +143,7 @@ function d2s() {
 
     // event listener to mute audio
     mute.addEventListener('click', () => {
+        // checks if video is already muted and changes state accordingly
         if (video.muted === true) {
             video.muted = false;
             mute.innerHTML = "Mute";
