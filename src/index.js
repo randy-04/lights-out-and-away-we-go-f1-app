@@ -182,7 +182,6 @@ function renderAllDrivers(pilot) {
     let driversPit = document.querySelector('.drivers-pit')
     let oneDriver = document.createElement('div');
     oneDriver.className = 'cont';
-    let oneModal = document.createElement('div');
 
     // rendering on the selected part of DOM from the API server
     oneDriver.innerHTML = `<img src="${pilot.driver.image}" alt="${pilot.driver.abbr}"/>
@@ -246,6 +245,7 @@ function init() {
     getAllDrivers();
     champModal();
     scrollTop();
+    
 }
 
 window.addEventListener("DOMContentLoaded", init)
